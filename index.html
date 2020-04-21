@@ -4,12 +4,7 @@
     </head>
     <body>
         <p>「發送訊息給我們」外掛程式：</p>
-        <div class="fb-messengermessageus" 
-          messenger_app_id="217209729376505" 
-          page_id="103259608017180"
-          color="blue"
-          size="xlarge">
-        </div>
+        
         
         <script>
           window.fbAsyncInit = function() {
@@ -20,7 +15,21 @@
               version          : 'v6.0'
             });
           };
+            (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
         </script>
-        <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+        
+          <!-- Your customer chat code -->
+          <div class="fb-customerchat"
+               page_id="103259608017180"
+               greeting_dialog_display="hide"
+               logged_in_greeting="Hello World! 我是工人智慧小編，如果有任何問題，請不吝指教。"
+               logged_out_greeting="Hello World! 我是工人智慧小編，如果有任何問題，請不吝指教。">
+          </div>
     </body>
 </html>
